@@ -1,5 +1,5 @@
 # snow-route-travels
-Trusted Taxi &amp; Tour Services in Himachal Pradesh.
+Trusted Taxi &amp; Tour Services in shimla Himachal Pradesh.
 # Ajay Kumar Portfolio
 
 Welcome to my personal portfolio website.
