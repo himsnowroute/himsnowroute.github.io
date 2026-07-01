@@ -62,7 +62,38 @@ h1{color:#003d99;font-size:28px}
 
 <p style="text-align:center; margin:10px 0 0 0; font-size:13px; color:#666;">And 1000+ more happy customers</p>
 </div>
-
+<div style="margin:20px 0; padding:15px; background:#fff; border-radius:8px; box-shadow:0 2px 4px #ccc;">
+<h3 style="color:#0066cc; margin-top:0; text-align:center;">📝 Book Your Taxi Now</h3>
+<form onsubmit="sendToWhatsApp(); return false;">
+<input id="name" type="text" placeholder="Your Name" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ddd; border-radius:5px; box-sizing:border-box;">
+<input id="phone" type="tel" placeholder="Phone Number" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ddd; border-radius:5px; box-sizing:border-box;">
+<input id="date" type="date" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ddd; border-radius:5px; box-sizing:border-box;">
+<select id="trip" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ddd; border-radius:5px; box-sizing:border-box;">
+<option value="">Select Trip</option>
+<option value="Shimla to Manali">Shimla to Manali</option>
+<option value="Manali to Shimla">Manali to Shimla</option>
+<option value="Rohtang Pass">Rohtang Pass</option>
+<option value="Kullu Manali Local">Kullu Manali Local</option>
+<option value="Full Tour Package">Full Tour Package</option>
+</select>
+<button type="submit" style="width:100%; background:#25D366; color:white; padding:12px; border:none; border-radius:5px; font-size:16px; font-weight:bold; cursor:pointer;">💬 Send on WhatsApp</button>
+</form>
+</div>
+<script>
+function sendToWhatsApp() {
+var name = http://document.getElementById("name").value;
+var phone = http://document.getElementById("phone").value;
+var date = http://document.getElementById("date").value;
+var trip = http://document.getElementById("trip").value;
+var url = "https://wa.me/917018176861?text=" 
+- "_New Taxi Booking_%0A%0A" 
+- "_Name:_ " + name + "%0A"
+- "_Phone:_ " + phone + "%0A"
+- "_Date:_ " + date + "%0A"
+- "_Trip:_ " + trip;
+http://window.open(url, '_blank');
+}
+</script>
 </body>
 
 </html>
