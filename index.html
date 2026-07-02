@@ -56,7 +56,8 @@
       </div>
       <div onclick="openModal('modal3')" class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl transition transform hover:scale-105">
         <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500" class="w-full h-48 object-cover">
-        <div class="p-6">
+        <div class="
+p-6">
           <h3 class="text-xl font-bold text-blue-700 mb-2">Dharamshala Dalhousie 6 Days</h3>
           <p class="text-gray-600 mb-4">3N Dharamshala + 2N Dalhousie | Starting ₹18,999</p>
           <span class="text-blue-600 font-semibold">Tap for Full Itinerary →</span>
@@ -82,4 +83,79 @@
             <b>Includes:</b> AC Taxi, 4N Hotel, Breakfast, Sightseeing, Toll<br>
             <b>Price:</b> ₹15,999 per person
           </div>
-          <a href="https://wa.me/917018176861?text=Shimla%20Manali%20Package%20book%20karna%20hai" class="block text-center bg-green-500 text-white py-3 rounded
+          <a href="https://wa.me/917018176861?text=Shimla%20Manali%20Package%20book%20karna%20hai" class="block text-center bg-green-500 text-white py-3 rounded-lg font-bold mt-4">Book on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50" onclick="closeModal('modal2')">
+    <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto" onclick="event.stopPropagation()">
+      <div class="p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-2xl font-bold text-blue-700">Manali Kasol 4 Days / 3 Nights</h3>
+          <button onclick="closeModal('modal2')" class="text-3xl text-gray-500">&times;</button>
+        </div>
+        <div class="space-y-3 text-gray-700">
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 1:</b> Delhi/Chandigarh to Manali | Evening Mall Road</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 2:</b> Manali - Solang - Atal Tunnel | Hadimba Temple</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 3:</b> Kasol + Manikaran | Parvati Valley, Hot Springs</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 4:</b> Manali to Delhi/Chandigarh Drop</div>
+          <div class="bg-blue-50 p-4 rounded mt-4">
+            <b>Includes:</b> AC Taxi, 3N Hotel, Breakfast, Sightseeing<br>
+            <b>Price:</b> ₹12,999 per person
+          </div>
+          <a href="https://wa.me/917018176861?text=Manali%20Kasol%20Package%20book%20karna%20hai" class="block text-center bg-green-500 text-white py-3 rounded-lg font-bold mt-4">Book on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50" onclick="closeModal('modal3')">
+    <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto" onclick="event.stopPropagation()">
+      <div class="p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-2xl font-bold text-blue-700">Dharamshala Dalhousie 6 Days / 5 Nights</h3>
+          <button onclick="closeModal('modal3')" class="text-3xl text-gray-500">&times;</button>
+        </div>
+        <div class="space-y-3 text-gray-700">
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 1:</b> Delhi/Chandigarh to Dharamshala | McLeodganj</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 2:</b> Dharamshala Local | Dalai Lama Temple, Bhagsu Falls</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 3:</b> Dharamshala to Dalhousie | Khajjiar - Mini Switzerland</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 4:</b> Dalhousie Local | Panchpula, Satdhara Falls</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 5:</b> Chamba Day Trip | Laxmi Narayan Temple</div>
+          <div class="border-l-4 border-blue-500 pl-4"><b>Day 6:</b> Dalhousie to Delhi/Chandigarh Drop</div>
+          <div class="bg-blue-50 p-4 rounded mt-4">
+            <b>Includes:</b> AC Taxi, 5N Hotel, Breakfast, Sightseeing<br>
+            <b>Price:</b> ₹18,999 per person
+          </div>
+          <a href="https://wa.me/917018176861?text=Dharamshala%20Package%20book%20karna%20hai" class="block text-center bg-green-500 text-white py-3 rounded-lg font-bold mt-4">Book on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="contact" class="bg-blue-800 text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+      <p class="text-lg mb-2">📞 +91 70181 76861</p>
+      <p class="text-lg mb-6">📍 Shimla, Himachal Pradesh</p>
+      <a href="https://wa.me/917018176861" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold inline-block">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/917018176861" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.34 8.34 0 012.41 5.91c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.13l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.26-.17-.54-.3-.28-.13-1.66-.82-1.92-.91-.26-.1-.45-.15-.64.15-.19.3-.73.91-.9 1.1-.17.18-.34.2-.63.07-.28-.13-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.27-.31.4-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.03-.48-.08-.13-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49l-.55-.01z"/></svg>
+  </a>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  </script>
+</body>
+</html>
