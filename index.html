@@ -1,131 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shimla Manali Tour Package | Snow Route Travels</title>
+<title>Shimla Manali Tour Package - Snow Route Travels</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{line-height:1.6;color:#333;background:#f9fafb}
-header{background:#1e3a8a;color:white;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-header h1{font-size:22px}
+body{margin:0;font-family:Arial;background:#f9fafb;color:#333}
+header{background:#1e3a8a;color:white;padding:15px 20px;text-align:center}
+header h1{font-size:22px;margin:0}
+nav{background:#1e3a8a;text-align:center;padding:10px}
 nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold}
-.call-btn{background:#ff6b00;color:white;padding:8px 15px;border-radius:5px;text-decoration:none;font-weight:bold}
-.hero{background:#1e3a8a;color:white;text-align:center;padding:80px 20px}
-.hero h2{font-size:36px;margin-bottom:10px}
-.hero p{font-size:18px;margin-bottom:25px}
-.packages-highlight{background:white;color:#1e3a8a;padding:20px;border-radius:12px;max-width:650px;margin:25px auto;box-shadow:0 4px 10px rgba(0,0,0,0.2)}
-.packages-highlight div{padding:10px;font-weight:bold;font-size:17px;border-bottom:1px solid #eee}
-.packages-highlight div:last-child{border:none}
-.btn-wa{background:#25D366;color:white;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin:10px;font-size:18px}
-.btn-main{background:#1e3a8a;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;margin:10px}
-.trust-bar{background:#f3f4f6;padding:15px;text-align:center;font-size:15px;display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
-.container{max-width:1200px;margin:auto;padding:40px 20px}
-.container h2{text-align:center;font-size:30px;margin-bottom:40px;color:#1e3a8a}
-.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
-.pkg-card{background:white;border-radius:12px;padding:25px;box-shadow:0 4px 15px rgba(0,0,0,0.08);border:1px solid #e5e7eb}
-.badge{background:#ff6b00;color:white;padding:6px 12px;border-radius:6px;font-size:13px;font-weight:bold;display:inline-block;margin-bottom:10px}
-.pkg-card h3{font-size:22px;margin:12px 0;color:#1e3a8a}
-.price{font-size:26px;color:#dc2626;font-weight:bold;margin:12px 0}
-.duration{color:#6b7280;font-size:15px;margin-bottom:10px}
-.about{background:white;padding:50px 20px;text-align:center}
-.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1000px;margin:30px auto}
-.about-box h4{color:#1e3a8a;font-size:20px;margin-bottom:8px}
-.cta-section{background:#1e3a8a;color:white;text-align:center;padding:50px 20px}
-.cta-section h2{color:white;margin-bottom:15px}
-footer{background:#111827;color:#9ca3af;text-align:center;padding:30px 20px;font-size:14px}
-footer a{color:#9ca3af;margin:0 10px;text-decoration:none}
-@media(max-width:768px){nav{display:none}.hero h2{font-size:28px}.trust-bar{flex-direction:column;gap:10px}}
+.hero{background:#1e3a8a;color:white;text-align:center;padding:60px 20px}
+.hero h2{font-size:32px;margin-bottom:10px}
+.hero p{font-size:18px;margin-bottom:20px}
+.box{background:white;color:#1e3a8a;padding:20px;border-radius:8px;max-width:600px;margin:20px auto}
+.box div{padding:8px;font-weight:bold;border-bottom:1px solid #eee}
+.btn{display:inline-block;padding:14px 28px;margin:10px;border-radius:8px;text-decoration:none;font-weight:bold}
+.btn-green{background:#25D366;color:white}
+.btn-blue{background:white;color:#1e3a8a}
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+.container h2{text-align:center;font-size:28px;margin-bottom:30px;color:#1e3a8a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:white;border-radius:8px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.card h3{font-size:20px;color:#1e3a8a;margin:10px 0}
+.price{font-size:24px;color:#dc2626;font-weight:bold;margin:10px 0}
+footer{background:#111827;color:#9ca3af;text-align:center;padding:30px 20px;font-size:14px;margin-top:40px}
 </style>
 </head>
 <body>
 <header>
-<h1>❄️ Snow Route Travels</h1>
+<h1>Snow Route Travels</h1>
+</header>
 <nav>
 <a href="index.html">Home</a>
 <a href="packages.html">Packages</a>
 <a href="contact.html">Contact</a>
 </nav>
-<a href="tel:+917018176861" class="call-btn">Call Now</a>
-</header>
 <section class="hero">
 <h2>Shimla Manali Tour Packages</h2>
-<p>Complete Travel Solutions: Hotels, Meals & Private Sightseeing</p>
-<div class="packages-highlight">
-<div>💑 Honeymoon 3N/4D - ₹16,000 Per Couple</div>
-<div>🏔️ Shimla-Manali 4N/5D - ₹12,000 Per Person</div>
-<div>🌲 Complete Himachal 5N/6D - ₹12,000 Per Person</div>
+<p>Hotels, Meals and Private Cab Included</p>
+<div class="box">
+<div>Honeymoon 3N/4D - Rs 16000 Per Couple</div>
+<div>Shimla Manali 4N/5D - Rs 12000 Per Person</div>
+<div>Complete Himachal 5N/6D - Rs 12000 Per Person</div>
 </div>
-<a href="packages.html" class="btn-main">View All Packages</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20tour%20package%20details" class="btn-wa">WhatsApp Us</a>
+<a href="packages.html" class="btn btn-blue">View All Packages</a>
+<a href="https://wa.me/917018176861" class="btn btn-green">WhatsApp Us</a>
 </section>
-<div class="trust-bar">
-<span>✅ GST Invoice Provided</span>
-<span>✅ 500+ Happy Travelers</span>
-<span>✅ 24x7 On-Trip Support</span>
-<span>✅ No Hidden Charges</span>
-</div>
 <div class="container">
 <h2>Popular Packages</h2>
-<div class="pkg-grid">
-<div class="pkg-card">
-<span class="badge">HONEYMOON SPECIAL</span>
+<div class="grid">
+<div class="card">
 <h3>Manali Honeymoon 3N/4D</h3>
-<p class="duration">3 Nights / 4 Days</p>
-<p class="price">₹16,000 Per Couple</p>
-<p>Private Cab + Valley View Room + Candle Light Dinner + Solang Valley + Atal Tunnel</p>
-<a href="packages.html" class="btn-main">View Details</a>
+<p class="price">Rs 16000 Per Couple</p>
+<p>Private Cab, Valley View Room, Candle Light Dinner, Solang Valley</p>
 </div>
-<div class="pkg-card">
+<div class="card">
 <h3>Shimla Manali 4N/5D</h3>
-<p class="duration">4 Nights / 5 Days</p>
-<p class="price">₹12,000 Per Person</p>
-<p>2N Shimla + 2N Manali + Volvo + All Sightseeing + Breakfast & Dinner</p>
-<a href="packages.html" class="btn-main">View Details</a>
+<p class="price">Rs 12000 Per Person</p>
+<p>2N Shimla, 2N Manali, Volvo, All Sightseeing, Breakfast Dinner</p>
 </div>
-<div class="pkg-card">
+<div class="card">
 <h3>Complete Himachal 5N/6D</h3>
-<p class="duration">5 Nights / 6 Days</p>
-<p class="price">₹12,000 Per Person</p>
-<p>Kasol + Manikaran + Atal Tunnel + Sissu + All Meals + Private Cab</p>
-<a href="packages.html" class="btn-main">View Details</a>
+<p class="price">Rs 12000 Per Person</p>
+<p>Kasol, Manikaran, Atal Tunnel, All Meals, Private Cab</p>
 </div>
 </div>
 </div>
-<section class="about">
-<h2>Why Choose Snow Route Travels?</h2>
-<div class="about-grid">
-<div class="about-box">
-<h4>📍 Local Experts</h4>
-<p>Manali based team. Har rasta, har hotel ka experience hai</p>
-</div>
-<div class="about-box">
-<h4>🚗 Private Cab Only</h4>
-<p>No sharing cabs. Family ke saath full comfort aur privacy</p>
-</div>
-<div class="about-box">
-<h4>✏️ 100% Customizable</h4>
-<p>Aapke budget aur time ke hisab se plan modify kar denge</p>
-</div>
-<div class="about-box">
-<h4>🏨 Verified Hotels</h4>
-<p>Clean 3-star valley view properties. 4.5+ customer rating</p>
-</div>
-</div>
-</section>
-<section class="cta-section">
-<h2>Ready to Plan Your Himachal Trip?</h2>
-<p>Get instant quote on WhatsApp. No waiting, no forms.</p>
-<a href="https://wa.me/917018176861?text=Hi%2C%20I%20want%20to%20book%20package" class="btn-wa">Chat on WhatsApp Now</a>
-</section>
 <footer>
-<p>
-<a href="index.html">Home</a> | 
-<a href="packages.html">Packages</a> | 
-<a href="contact.html">Contact</a>
-</p>
-<p style="margin-top:15px">© 2026 Snow Route Travels | Manali, Himachal Pradesh</p>
-<p>Call: +917018176861 | Email: snowroute@gmail.com</p>
+<p>© 2026 Snow Route Travels | Call: +917018176861</p>
+<p><a href="index.html" style="color:#9ca3af">Home</a> | <a href="packages.html" style="color:#9ca3af">Packages</a> | <a href="contact.html" style="color:#9ca3af">Contact</a></p>
 </footer>
 </body>
 </html>
