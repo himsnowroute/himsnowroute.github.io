@@ -3,29 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HimSnow Route - Shimla Manali 4N/6D Volvo Trip</title>
+    <title>5 Nights / 6 Days Manali Tour Package</title>
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5;}
-       .header-top {background: #1e3a8a; color: white; padding: 8px 15px; font-size: 14px; display: flex; justify-content: space-between; align-items: center;}
-       .header-top a {color: white; text-decoration: none;}
-       .navbar {background: white; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;}
-       .logo {font-size: 24px; font-weight: bold; color: #dc2626;}
-       .logo span {color: #16a34a;}
-       .hero {background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200'); background-size: cover; background-position: center; color: white; padding: 60px 20px; text-align: center;}
-       .hero h1
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HimSnow Route - Shimla Manali 4N/6D Volvo Trip</title>
-    <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5;}
-      .header-top {background: #1e3a8a; color: white; padding: 8px 15px; font-size: 14px; display: flex; justify-content: space-between; align-items: center;}
-      .header-top a {color: white; text-decoration: none;}
-      .navbar {background: white; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;}
-      .logo {font-size: 24px; font-weight: bold; color: #dc2626;}
-      .logo span {color: #16a34a;}
-      .hero {background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200'); background-size: cover; background-position: center
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #dd6b20;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .package-header {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), #2a4365);
+            color: white;
+            padding: 35px 20px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(26, 54, 93, 0.15);
+        }
+
+        .package-header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .package-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .day-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border-top: 6px solid var(--primary-color);
+            position: relative;
+        }
+
+        .day-title {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .time-slot {
+            margin-bottom: 20px;
+        }
+
+        .time-slot strong {
+            color: var(--accent-color);
+            display: inline-block;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .time-slot p {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #4a5568;
+        }
+
+        .optional-box {
+            background-color: #fffaf0;
+            border: 1px dashed var(--accent-color);
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #744210;
+        }
+
+        .optional-box strong {
+            color: #dd6b20;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 15px 10px; }
+            .package-header h1 { font-size: 1.75rem; }
+            .day-title { font-size: 1.25rem; flex-direction: column; align-items: flex-start; gap: 10px; }
+            .day-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Package Header -->
+    <div class="package-header">
+        <h1>Exclusive Manali Tour</h1>
+        <p>5 Nights / 6 Days Itinerary (Day 5 & 6)</p>
+    </div>
+
+    <!-- Day 5 Card -->
+    <div class="day-card">
+        <h2 class="day-title">
+            High-Altitude Thrills at Solang Valley
+            <span class="day-badge">Day 5</span>
+        </h2>
+        
+        <div class="time-slot">
+            <strong>Morning</strong>
+            <p>Head up to Solang Valley, widely known as the adventure capital of Manali, right after a delicious breakfast at your hotel.</p>
+        </div>
+
+        <div class="time-slot">
+            <strong>Afternoon</strong>
+            <p>Soar high into the sky on an exhilarating tandem paragliding ride with your partner, or simply sit back and enjoy the panoramic snow-capped mountain views from the Solang Ropeway cable car.</p>
+        </div>
+
+        <div class="time-slot">
+            <strong>Evening</strong>
+            <p>Return to Manali. Spend a relaxed final evening shopping for local wooden crafts, authentic saffron, and fresh fruit wines on the vibrant Mall Road.</p>
+        </div>
+
+        <div class="optional-box">
+            <strong>Optional Upgrade:</strong> If the weather permits and roads are open, you can upgrade your itinerary to visit the high-altitude Atal Tunnel and the stunning Sissu Valley.
+        </div>
+    </div>
+
+    <!-- Day 6 Card -->
+    <div class="day-card">
+        <h2 class="day-title">
+            Manali to Delhi Return Journey
+            <span class="day-badge">Day 6</span>
+        </h2>
+        
+        <div class="time-slot">
+            <strong>Morning</strong>
+            <p>Enjoy a hearty breakfast with a breathtaking view of the snow peaks. Check out from your hotel and stop at a Kullu Shawl Factory on the highway to buy authentic hand-woven pashminas, stoles, or traditional caps as lifelong memories.</p>
+        </div>
+
+        <div class="time-slot">
+            <strong>Night (540 km / ~11-12 hours)</strong>
+            <p>Rest easy as your professional driver smoothly navigates the downhill highways, dropping you back safely at your preferred location in Delhi late at night.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
