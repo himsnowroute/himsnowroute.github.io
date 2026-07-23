@@ -1,169 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snow Route Travel - Premium Tour Packages</title>
-    <style>
-        /* Global Styles */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        
-        /* Header & Navigation */
-        header { background: linear-gradient(135deg, #1d3557, #457b9d), url('Banner1.jpg'); background-size: cover; background-position: center; background-blend-mode: overlay; color: white; padding: 60px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: relative; }
-        header h1 { font-size: 2.8rem; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        header p { font-size: 1.2rem; margin-top: 5px; color: #a8dadc; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-        
-        /* Contact Number Badge in Header */
-        .header-contact { display: inline-block; background: #e63946; color: white; padding: 8px 18px; border-radius: 20px; font-weight: bold; margin-top: 15px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-size: 1rem; }
-        .header-contact:hover { background: #c1121f; }
 
-        /* Container */
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: #1d3557; position: relative; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: #e63946; margin: 8px auto 0; }
-
-        /* Package Cards */
-        .package-card { background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; overflow: hidden; border: 1px solid #e1e8ed; transition: transform 0.3s; }
-        .package-card:hover { transform: translateY(-3px); }
-        
-        /* Image Banner inside card */
-        .package-banner { width: 100%; height: 200px; object-fit: cover; }
-        
-        .package-header { background: #f8f9fa; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
-        .package-header h3 { font-size: 1.3rem; color: #1d3557; }
-        .arrow { font-size: 1.2rem; color: #457b9d; transition: transform 0.3s; }
-        
-        /* Expandable Content */
-        .package-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fff; }
-        .package-content.active { padding: 20px; max-height: 1200px; }
-        
-        /* Details & Badges */
-        .price-tag { font-size: 1.5rem; color: #e63946; font-weight: bold; margin-bottom: 15px; }
-        .price-tag span { font-size: 0.9rem; color: #666; font-weight: normal; }
-        .includes-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
-        .includes-list li { background: #e8f5e9; color: #2e7d32; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-        
-        /* Itinerary Timeline */
-        .itinerary { margin-top: 15px; border-left: 2px solid #a8dadc; padding-left: 15px; }
-        .day-step { margin-bottom: 12px; }
-        .day-step strong { color: #1d3557; display: block; }
-        
-        /* Action Button */
-        .cta-btn { display: inline-block; background: #e63946; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: background 0.2s; }
-        .cta-btn:hover { background: #c1121f; }
-
-        /* Booking Form */
-        .booking-section { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; margin-top: 40px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #1d3557; font-size: 0.9rem; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; outline: none; }
-        .form-group input:focus, .form-group select:focus { border-color: #457b9d; }
-        
-        /* WhatsApp Submit Button */
-        .submit-btn { width: 100%; background: #25D366; color: white; padding: 14px; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.2s; display: flex; justify-content: center; align-items: center; gap: 8px; }
-        .submit-btn:hover { background: #128C7E; }
-    </style>
-</head>
-<body>
-
-    <!-- Top Section: Company Name with Background Banner -->
-    <header>
-        <h1>Snow Route Travel</h1>
-        <p>Your Trusted Journey Partner for the Himalayas</p>
-        <a href="tel:+917018176861" class="header-contact">📞 Call Us: +91 70181 76861</a>
-    </header>
-
-    <div class="container">
-        <h2 class="section-title">Our Exclusive Tour Packages</h2>
-
-        <!-- Package 1: Shimla Manali Honeymoon Package -->
-        <div class="package-card">
-            <img src="Hadimba.jpg" alt="Manali" class="package-banner">
-            <div class="package-header" onclick="togglePackage(this)">
-                <h3>1. Shimla Manali Honeymoon Package</h3>
-                <span class="arrow">▼</span>
-            </div>
-            <div class="package-content">
-                <div class="price-tag">₹6,999 <span>per person</span></div>
-                <ul class="includes-list">
-                    <li>✓ Premium Hotel Stay</li>
-                    <li>✓ Daily Breakfast</li>
-                    <li>✓ Daily Dinner</li>
-                    <li>✓ Dedicated Taxi (Sightseeing)</li>
-                    <li>✓ Honeymoon Special Kit</li>
-                </ul>
-                <p>Spend romantic moments amidst snow-capped peaks. This customized package ensures comfort, privacy, and unforgettable memories.</p>
-                <a href="#book-now" class="cta-btn" onclick="selectPackage('shimla-manali')">Book This Package</a>
-            </div>
-        </div>
-
-        <!-- Package 2: Shimla Kinnaur Tour Package -->
-        <div class="package-card">
-            <img src="shimla.jpg" alt="Shimla Kinnaur" class="package-banner">
-            <div class="package-header" onclick="togglePackage(this)">
-                <h3>2. Shimla Kinnaur Offbeat Tour</h3>
-                <span class="arrow">▼</span>
-            </div>
-            <div class="package-content">
-                <div class="price-tag">₹10,000 <span>per person (4 Days / 5 Nights)</span></div>
-                <ul class="includes-list">
-                    <li>✓ Standard Hotel/Homestay</li>
-                    <li>✓ Breakfast & Dinner</li>
-                    <li>✓ Transport Included</li>
-                    <li>✓ Guided Sightseeing</li>
-                </ul>
-                
-                <h4 style="margin-top: 15px; color: #1d3557;">Tour Itinerary:</h4>
-                <div class="itinerary">
-                    <div class="day-step"><strong>Day 1: Arrival in Shimla & Local Sightseeing</strong> Drive to Shimla, check-in, and explore Mall Road & Ridge.</div>
-                    <div class="day-step"><strong>Day 2: Shimla to Sarahan via Kufri</strong> Beautiful drive through dense forests, visit Bhima Kali Temple.</div>
-                    <div class="day-step"><strong>Day 3: Sarahan to Sangla (Kinnaur)</strong> Enter the stunning Kinnaur Valley, visit Kamru Fort.</div>
-                    <div class="day-step"><strong>Day 4: Chitkul Exploration & Departure</strong> Visit India's last village Chitkul, head back with beautiful memories.</div>
-                </div>
-                <a href="#book-now" class="cta-btn" onclick="selectPackage('shimla-kinnaur')">Book This Package</a>
-            </div>
-        </div>
-
-        <!-- Last Section: Booking Form -->
-        <div class="booking-section" id="book-now">
-            <h2 class="section-title" style="margin-bottom: 20px;">Quick Booking Form</h2>
-            <form action="#" method="POST" id="travelForm">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit mobile number" required>
-                </div>
-                <div class="form-group">
-                    <label for="package">Select Your Package</label>
-                    <select id="package" name="package" required>
-                        <option value="" disabled selected>-- Choose a package --</option>
-                        <option value="Shimla Manali Honeymoon Package (₹6,999)">Shimla Manali Honeymoon Package (₹6,999/person)</option>
-                        <option value="Shimla Kinnaur Offbeat Tour (₹10,000)">Shimla Kinnaur Offbeat Tour (₹10,000/person)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">Travel Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit" class="submit-btn">💬 Book via WhatsApp</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Smooth Open/Close function for packages
-        function togglePackage(header) {
-            const content = header.nextElementSibling;
-            const arrow = header.querySelector('.arrow');
-            
-            content.classList.toggle('active');
-            
-            if (content.classList.contains('active')) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,74 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snow Route Travel - Premium Himachal Tour Packages</title>
     <style>
-        /* Global & Reset Styles */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        /* Base Professional Design Grid */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
         body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
         
-        /* Premium Header Setup */
-        header { background: linear-gradient(135deg, #1d3557, #457b9d), url('Banner1.jpg'); background-size: cover; background-position: center; background-blend-mode: overlay; color: white; padding: 70px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15); position: relative; }
-        header h1 { font-size: 3rem; letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-        header p { font-size: 1.3rem; margin-top: 5px; color: #a8dadc; font-weight: 500; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-        
-        /* Floating Header Call Button */
-        .header-contact { display: inline-block; background: #e63946; color: white; padding: 10px 22px; border-radius: 25px; font-weight: bold; margin-top: 20px; text-decoration: none; box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4); font-size: 1.05rem; transition: background 0.3s, transform 0.2s; }
+        /* Hero Banner Section */
+        header { background: linear-gradient(135deg, rgba(29,53,87,0.85), rgba(69,123,157,0.85)), url('Banner1.jpg'); background-size: cover; background-position: center; color: white; padding: 60px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        header h1 { font-size: 2.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header p { font-size: 1.1rem; margin-top: 5px; color: #a8dadc; font-weight: 500; }
+        .header-contact { display: inline-block; background: #e63946; color: white; padding: 10px 22px; border-radius: 25px; font-weight: bold; margin-top: 15px; text-decoration: none; box-shadow: 0 4px 12px rgba(230,57,70,0.3); transition: 0.2s; }
         .header-contact:hover { background: #c1121f; transform: translateY(-2px); }
 
-        /* Layout Container */
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 35px; font-size: 2.1rem; color: #1d3557; position: relative; font-weight: 700; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #e63946; margin: 10px auto 0; border-radius: 2px; }
+        /* Content Container */
+        .container { max-width: 900px; margin: 40px auto; padding: 0 15px; }
+        .section-title { text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: #1d3557; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #e63946; margin: 8px auto 0; }
 
-        /* Professional Package Cards */
-        .package-card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); margin-bottom: 30px; overflow: hidden; border: 1px solid #e1e8ed; transition: transform 0.3s, box-shadow 0.3s; }
-        .package-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        /* Premium Package Cards */
+        .package-card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; overflow: hidden; border: 1px solid #e1e8ed; transition: 0.3s; }
+        .package-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .package-banner { width: 100%; height: 210px; object-fit: cover; display: block; }
         
-        /* Fixed Aspect Image Banner */
-        .package-banner { width: 100%; height: 230px; object-fit: cover; display: block; border-bottom: 1px solid #eee; }
+        /* Interactive Headers */
+        .package-header { background: #f8f9fa; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; }
+        .package-header h3 { font-size: 1.25rem; color: #1d3557; font-weight: 600; }
+        .arrow { font-size: 1.1rem; color: #457b9d; transition: transform 0.3s; }
         
-        /* Clickable Header Area */
-        .package-header { background: #f8f9fa; padding: 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
-        .package-header:hover { background: #f1f3f5; }
-        .package-header h3 { font-size: 1.4rem; color: #1d3557; font-weight: 600; padding-right: 15px; }
-        .arrow { font-size: 1.3rem; color: #457b9d; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); min-width: 20px; text-align: right; }
+        /* Content Panel Layout */
+        .package-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out; background: #fff; }
+        .package-content.active { padding: 20px; max-height: 2000px; border-top: 1px solid #eee; }
         
-        /* Dynamic Expanding Panel */
-        .package-content { padding: 0 22px; max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s; background: #fff; border-top: 0 solid #eee; }
-        .package-content.active { padding: 22px; max-height: 1500px; border-top: 1px solid #eee; }
+        /* Pricing & Badge Rules */
+        .meta-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .price-tag { font-size: 1.5rem; color: #e63946; font-weight: 700; }
+        .price-tag span { font-size: 0.9rem; color: #666; font-weight: normal; }
+        .duration-tag { background: #457b9d; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; }
+        .includes-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+        .includes-list li { background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
         
-        /* Flex Meta Info (Price + Duration) */
-        .meta-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 15px; gap: 10px; }
-        .price-tag { font-size: 1.6rem; color: #e63946; font-weight: 700; }
-        .price-tag span { font-size: 0.95rem; color: #666; font-weight: normal; }
-        .duration-tag { background: #457b9d; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; }
-
-        /* Feature Inclusions Layout */
-        .includes-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-        .includes-list li { background: #e8f5e9; color: #2e7d32; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-        
-        /* Itinerary Timeline Architecture */
-        .itinerary-heading { font-size: 1.1rem; color: #1d3557; margin-bottom: 12px; font-weight: 700; border-left: 3px solid #e63946; padding-left: 8px; }
-        .itinerary { margin-top: 5px; border-left: 2px solid #a8dadc; padding-left: 20px; margin-bottom: 20px; position: relative; }
-        .day-step { margin-bottom: 16px; position: relative; }
-        .day-step::before { content: ''; position: absolute; left: -26px; top: 6px; width: 10px; height: 10px; background: #457b9d; border-radius: 50%; border: 2px solid #fff; }
-        .day-step strong { color: #1d3557; display: block; font-size: 0.95rem; margin-bottom: 2px; }
-        .day-step p { font-size: 0.9rem; color: #555; }
-        
-        /* Action buttons inside panels */
-        .cta-btn { display: inline-block; background: #1d3557; color: white; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; transition: background 0.2s; border: none; cursor: pointer; }
+        /* Timeline UI Structure */
+        .itinerary-heading { font-size: 1.05rem; color: #1d3557; margin-bottom: 12px; font-weight: 700; border-left: 3px solid #e63946; padding-left: 8px; }
+        .itinerary { border-left: 2px solid #a8dadc; padding-left: 18px; margin-bottom: 20px; }
+        .day-step { margin-bottom: 14px; position: relative; }
+        .day-step::before { content: ''; position: absolute; left: -24px; top: 6px; width: 8px; height: 8px; background: #457b9d; border-radius: 50%; }
+        .day-step strong { color: #1d3557; display: block; font-size: 0.9rem; }
+        .day-step p { font-size: 0.85rem; color: #555; margin-top: 2px; }
+        .cta-btn { display: inline-block; background: #1d3557; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer; transition: 0.2s; }
         .cta-btn:hover { background: #457b9d; }
 
-        /* Sticky Fixed Booking Form Area */
-        .booking-section { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); border: 1px solid #e1e8ed; margin-top: 45px; scroll-margin-top: 20px; }
-        .form-group { margin-bottom: 22px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #1d3557; font-size: 0.95rem; }
-        .form-group input, .form-group select { width: 100%; padding: 13px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; outline: none; transition: border-color 0.2s; background-color: #fafafa; }
+        /* Sticky Form Block */
+        .booking-section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; margin-top: 40px; scroll-margin-top: 20px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #1d3557; font-size: 0.9rem; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem; outline: none; background-color: #fafafa; }
         .form-group input:focus, .form-group select:focus { border-color: #457b9d; background-color: #fff; }
-        
-        /* WhatsApp Core Submit Interface */
-        .submit-btn { width: 100%; background: #25D366; color: white; padding: 15px; border: none; border-radius: 6px; font-size: 1.15rem; font-weight: bold; cursor: pointer; transition: background 0.2s, transform 0.1s; display: flex; justify-content: center; align-items: center; gap: 10px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
-        .submit-btn:hover { background: #128C7E; transform: translateY(-1px); }
-        .submit-btn:active { transform: translateY(1px); }
+        .submit-btn { width: 100%; background: #25D366; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37,211,102,0.2); }
+        .submit-btn:hover { background: #128C7E; }
     </style>
 </head>
 <body>
@@ -251,11 +75,11 @@
     </header>
 
     <div class="container">
-        <h2 class="section-title">Our Premium Tour Packages</h2>
+        <h2 class="section-title">Our Exclusive Tour Packages</h2>
 
-        <!-- PACKAGE 1: SHIMLA MANALI HONEYMOON -->
+        <!-- PACKAGE 1: SHIMLA MANALI PREMIUM -->
         <div class="package-card">
-            <img src="Hadimba.jpg" alt="Shimla Manali Honeymoon" class="package-banner">
+            <img src="Hadimba.jpg" alt="Shimla Manali Package" class="package-banner">
             <div class="package-header" onclick="togglePackage(this)">
                 <h3>1. Shimla Manali Premium Honeymoon Package</h3>
                 <span class="arrow">▼</span>
@@ -263,27 +87,27 @@
             <div class="package-content">
                 <div class="meta-flex">
                     <div class="price-tag">₹6,999 <span>per person</span></div>
-                    <div class="duration-tag">5 Days / 6 Nights</div>
+                    <div class="duration-tag">4 Nights / 5 Days</div>
                 </div>
                 <ul class="includes-list">
-                    <li>✓ Premium Hotel Stay</li>
-                    <li>✓ Daily Breakfast & Dinner</li>
-                    <li>✓ Dedicated Private Taxi</li>
-                    <li>✓ Special Honeymoon Cake & Candlelight Dinner</li>
+                    <li>✓ Luxury Stay</li>
+                    <li>✓ Breakfast & Dinner</li>
+                    <li>✓ Personal Cab</li>
+                    <li>✓ Honeymoon Specials</li>
                 </ul>
                 <div class="itinerary-heading">Day-by-Day Itinerary:</div>
                 <div class="itinerary">
-                    <div class="day-step"><strong>Day 1: Arrival in Shimla & Local Stroll</strong><p>Pick up from Chandigarh/Kalka, drive to Shimla, check-in, and explore Mall Road & Ridge in evening.</p></div>
-                    <div class="day-step"><strong>Day 2: Kufri Sightseeing & Drive to Manali</strong><p>Explore snow activities at Kufri, then take a scenic drive to Manali via Kullu Valley.</p></div>
-                    <div class="day-step"><strong>Day 3: Manali Local Tour & Hadimba Temple</strong><p>Visit historic Hadimba Temple, Vashisht Hot Springs, and Club House.</p></div>
-                    <div class="day-step"><strong>Day 4: Solang Valley Adventurous Day</strong><p>Full day excursion to Solang Valley for paragliding, skiing, and snow points.</p></div>
-                    <div class="day-step"><strong>Day 5: Departure with Sweet Memories</strong><p>Morning checkout, shopping at Manali Mall road, and return drop to Chandigarh.</p></div>
+                    <div class="day-step"><strong>Day 1: Arrival in Queen of Hills</strong><p>Pick up from Chandigarh terminal, transfer to Shimla resort, evening walk around heritage Mall Road & Ridge.</p></div>
+                    <div class="day-step"><strong>Day 2: Kufri Snow Tracks & Manali Drive</strong><p>Explore gorgeous snow viewpoints at Kufri, then take a beautiful road trip to Manali tracking the Beas river.</p></div>
+                    <div class="day-step"><strong>Day 3: Manali Culture & Hadimba Temple</strong><p>Visit ancient wooden Hadimba Temple, Vashisht Hot Sulphur Springs, and evening local market shopping.</p></div>
+                    <div class="day-step"><strong>Day 4: Solang Valley Snow Experience</strong><p>Full day fun corridor tour at Solang Valley. Enjoy adrenaline adventures like paragliding, zorbing, and skiing.</p></div>
+                    <div class="day-step"><strong>Day 5: Departure Day</strong><p>Collect souvenirs from local markets and catch a smooth returning transit back to Chandigarh route links.</p></div>
                 </div>
-                <button class="cta-btn" onclick="selectPackage('Shimla Manali Premium Honeymoon Package (₹6,999)')">Select & Book This Package</button>
+                <button class="cta-btn" onclick="selectPackage('Shimla Manali Premium Honeymoon Package (₹6,999)')">Select & Book Package</button>
             </div>
         </div>
 
-        <!-- PACKAGE 2: SHIMLA KINNAUR OFFBEAT -->
+        <!-- PACKAGE 2: SHIMLA KINNAUR EXPLORER -->
         <div class="package-card">
             <img src="shimla.jpg" alt="Shimla Kinnaur Valley" class="package-banner">
             <div class="package-header" onclick="togglePackage(this)">
@@ -293,10 +117,16 @@
             <div class="package-content">
                 <div class="meta-flex">
                     <div class="price-tag">₹10,000 <span>per person</span></div>
-                    <div class="duration-tag">4 Days / 5 Nights</div>
+                    <div class="duration-tag">4 Nights / 5 Days</div>
                 </div>
                 <ul class="includes-list">
-                    <li>✓ Cozy Homestays / Standard Hotels</li>
-                    <li>✓ Organic MAP Meals (Breakfast & Dinner)</li>
-                    <li>✓ High Ground Clearance Inner-Line Transport</li>
-
+                    <li>✓ Premium Homestays</li>
+                    <li>✓ Organic Local Meals</li>
+                    <li>✓ SUV Transport</li>
+                    <li>✓ Verified Guides</li>
+                </ul>
+                <div class="itinerary-heading">Day-by-Day Itinerary:</div>
+                <div class="itinerary">
+                    <div class="day-step"><strong>Day 1: Shimla Runway to Sarahan Gateway</strong><p>Travel past deep pine forests of Fagu and Rampur. Visit the legendary thousands-year-old Bhima Kali Temple.</p></div>
+                    <div class="day-step"><strong>Day 2: Sarahan into Deep Sangla Valley</strong><p>Enter the giant mountain corridors of Kinnaur valley following Sutlej river. Explore architectural marvel Kamru Fort.</p></div>
+                    <div class="day-step"><strong>Day 3: Chitkul Village (India's Last Frontier)</strong><p>Drive inside spectacular borders to explore pristine Chitkul village. Spend timeless quiet minutes close to the Baspa river.</p></div>
