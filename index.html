@@ -1,137 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snow Route Travel - Himachal Tour Packages</title>
-    <style>
-        /* Professional Reset & Global Fonts */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding-bottom: 30px; }
-        
-        /* Premium Header Layout */
-        header { background: linear-gradient(135deg, rgba(29,53,87,0.85), rgba(69,123,157,0.85)), url('Banner1.jpg'); background-size: cover; background-position: center; color: white; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        header p { font-size: 1.1rem; margin-top: 5px; color: #a8dadc; }
-        .header-contact { display: inline-block; background: #e63946; color: white; padding: 10px 22px; border-radius: 25px; font-weight: bold; margin-top: 15px; text-decoration: none; box-shadow: 0 4px 12px rgba(230,57,70,0.3); }
-
-        /* Container & Cards Setup */
-        .container { max-width: 800px; margin: 30px auto; padding: 0 15px; }
-        .section-title { text-align: center; margin-bottom: 25px; font-size: 1.8rem; color: #1d3557; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: #e63946; margin: 8px auto 0; }
-        
-        .package-card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; overflow: hidden; border: 1px solid #e1e8ed; }
-        .package-banner { width: 100%; height: 200px; object-fit: cover; display: block; }
-        
-        /* Interactive Clickable Area */
-        .package-header { background: #f8f9fa; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; -webkit-tap-highlight-color: transparent; }
-        .package-header h3 { font-size: 1.2rem; color: #1d3557; font-weight: 600; padding-right: 10px; }
-        
-        /* Modern Status Badge Instead of Arrows */
-        .status-badge { background: #457b9d; color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; white-space: nowrap; }
-        
-        /* 100% Solid Toggle Panel (No Height Glitch) */
-        .package-content { display: none; padding: 20px; background: #fff; border-top: 1px solid #eee; }
-        .package-content.show-content { display: block !important; }
-        
-        /* Flex Rows Inside Content */
-        .meta-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
-        .price-tag { font-size: 1.5rem; color: #e63946; font-weight: 700; }
-        .price-tag span { font-size: 0.9rem; color: #666; font-weight: normal; }
-        .duration-tag { background: #1d3557; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; }
-        
-        .includes-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
-        .includes-list li { background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
-        
-        /* Timeline Itinerary Design */
-        .itinerary-heading { font-size: 1.05rem; color: #1d3557; margin-bottom: 12px; font-weight: 700; border-left: 3px solid #e63946; padding-left: 8px; }
-        .itinerary { border-left: 2px solid #a8dadc; padding-left: 18px; margin-bottom: 20px; }
-        .day-step { margin-bottom: 14px; position: relative; }
-        .day-step::before { content: ''; position: absolute; left: -24px; top: 6px; width: 8px; height: 8px; background: #457b9d; border-radius: 50%; }
-        .day-step strong { color: #1d3557; display: block; font-size: 0.9rem; }
-        .day-step p { font-size: 0.85rem; color: #555; margin-top: 2px; }
-        
-        .cta-btn { display: inline-block; background: #e63946; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer; }
-        
-        /* Professional Booking Section */
-        .booking-section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; margin-top: 40px; scroll-margin-top: 20px; }
-        .form-group { margin-bottom: 18px; }
-        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #1d3557; font-size: 0.9rem; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem; outline: none; background-color: #fafafa; }
-        .form-group input:focus, .form-group select:focus { border-color: #457b9d; background-color: #fff; }
-        
-        .submit-btn { width: 100%; background: #25D366; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37,211,102,0.2); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Him Snow Route Travels - Shimla Manali Taxi & Tour Packages | 7018176861</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Arial}
+body{background:#f6f7f9;color:#111}
+.top{background:#000;color:#fff;text-align:center;padding:8px;font-size:13px;position:sticky;top:0;z-index:99}
+.hero{background:#111;color:#fff;text-align:center;padding:35px 15px}
+.hero h1{font-size:30px} .hero p{opacity:.9;margin:10px 0 20px}
+.btn{display:block;padding:14px;border-radius:10px;font-weight:800;text-align:center;margin:10px 0;text-decoration:none}
+.btn-call{background:#16a34a;color:#fff;font-size:18px}
+.btn-wa{background:#25D366;color:#fff}
+.card{background:#fff;margin:15px;border-radius:16px;padding:18px;box-shadow:0 4px 15px rgba(0,0,0,.07)}
+.price{color:#16a34a;font-weight:900;font-size:20px}
+.day{border-left:3px solid #16a34a;padding:8px 12px;margin:10px 0;background:#f0fdf4;border-radius:0 8px 8px 0}
+.tag{display:inline-block;background:#dcfce7;color:#166534;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;font-size:13px}
+.float{position:fixed;bottom:12px;left:12px;right:12px;display:flex;gap:10px;z-index:100}
+</style>
 </head>
 <body>
+<div class="top">📍 Him Snow Route Travels | Call / WhatsApp: 7018176861 | 5.0 ⭐ Rated</div>
 
-    
-    <header>
-        <h1>Snow Route Travel</h1>
-        <p>Your Trusted Journey Partner for the Himalayas</p>
-        <a href="tel:+917018176861" class="header-contact">📞 Call Directly: +91 70181 76861</a>
-    </header>
+<div class="hero">
+  <h1>Shimla Manali Tour Packages</h1>
+  <p>Private Cab + Hotel + Breakfast<br>Sedan, Ertiga, Innova Crysta Available</p>
+  <a class="btn btn-call" href="tel:+917018176861">📞 CALL NOW - 7018176861</a>
+  <a class="btn btn-wa" href="https://wa.me/917018176861?text=Hi%20Shimla%20Package%20Chahiye">💬 WHATSAPP - 7018176861</a>
+</div>
 
-    <div class="container">
-        <h2 class="section-title">Our Tour Packages</h2>
+<!-- PACKAGE 1 -->
+<div class="card">
+  <span class="tag">MOST BOOKED - 5D/6N</span>
+  <h2>1. Shimla Manali Tour 5D/6N</h2>
+  <p style="margin:8px 0">Shimla 2N + Manali 3N | Private Cab</p>
+  <p class="price">₹19,500 / Couple + Cab</p>
+  <div class="day"><b>Day 1: Chandigarh/Delhi to Shimla</b><br>Pickup, drive to Shimla. Evening Mall Road, Ridge, Church. Overnight Shimla.</div>
+  <div class="day"><b>Day 2: Shimla - Kufri - Chail</b><br>Kufri, Green Valley, Indira Tourist Park, Chail Palace. Overnight Shimla.</div>
+  <div class="day"><b>Day 3: Shimla to Manali (7-8 Hrs)</b><br>Via Kullu Valley, Pandoh Dam, Beas River, Kullu Shawl Factory. Overnight Manali.</div>
+  <div class="day"><b>Day 4: Manali Local + Solang Valley</b><br>Hadimba Temple, Vashisht Temple, Mall Road, Solang Valley, Atal Tunnel (if open).</div>
+  <div class="day"><b>Day 5: Manali - Kullu - Manikaran - Kasol</b><br>Kasol, Manikaran Gurudwara, Parvati Valley. Overnight Manali/Kasol.</div>
+  <div class="day"><b>Day 6: Manali to Chandigarh/Delhi Drop</b><br>Checkout and drop with sweet memories.</div>
+  <div class="grid2"><div>✅ Cab, Hotel, Breakfast</div><div>✅ Toll, Parking, Driver</div><div>❌ Rohtang Pass Permit</div><div>❌ Lunch/Dinner</div></div>
+  <a class="btn btn-call" href="tel:+917018176861">Book This - 7018176861</a>
+  <a class="btn btn-wa" href="https://wa.me/917018176861?text=Shimla%20Manali%205D6N%20Package%20chahiye">Get Itinerary on WhatsApp</a>
+</div>
 
-        <!-- PACKAGE 1: SHIMLA MANALI -->
-        <div class="package-card">
-            <img src="Hadimba.jpg" alt="Shimla Manali" class="package-banner">
-            <div class="package-header" onclick="togglePackageDetails(this)">
-                <h3>1. Shimla Manali Premium Honeymoon Package</h3>
-                <span class="status-badge">Tap to View</span>
-            </div>
-            <div class="package-content">
-                <div class="meta-flex">
-                    <div class="price-tag">₹6,999 <span>per person</span></div>
-                    <div class="duration-tag">4 Nights / 5 Days</div>
-                </div>
-                <ul class="includes-list">
-                    <li>✓ Luxury Stay</li>
-                    <li>✓ Breakfast & Dinner</li>
-                    <li>✓ Personal Cab</li>
-                    <li>✓ Honeymoon Kit</li>
-                </ul>
-                <div class="itinerary-heading">Day-by-Day Itinerary:</div>
-                <div class="itinerary">
-                    <div class="day-step"><strong>Day 1: Arrival in Shimla</strong><p>Pick up from Chandigarh, transfer to Shimla hotel, evening walk around Mall Road & Ridge.</p></div>
-                    <div class="day-step"><strong>Day 2: Kufri Sightseeing & Manali Drive</strong><p>Explore gorgeous snow views at Kufri, then take a beautiful road trip transit to Manali.</p></div>
-                    <div class="day-step"><strong>Day 3: Manali Local Tour & Hadimba Temple</strong><p>Visit historic wooden Hadimba Temple, Vashisht Hot Springs, and evening local shopping.</p></div>
-                    <div class="day-step"><strong>Day 4: Solang Valley Adventurous Day</strong><p>Full day fun tour at Solang Valley. Enjoy sports like paragliding, skiing, and snow slides.</p></div>
-                    <div class="day-step"><strong>Day 5: Safe Departure Shift</strong><p>Collect beautiful memories and catch your returning drop transit back to Chandigarh.</p></div>
-                </div>
-                <button class="cta-btn" onclick="selectPackageAndScroll('Shimla Manali Premium Honeymoon Package (₹6,999)')">Book This Package</button>
-            </div>
-        </div>
+<!-- PACKAGE 2 -->
+<div class="card">
+  <span class="tag">HILLS + SNOW - 4N/5D</span>
+  <h2>2. Dharamshala Dalhousie 4N/5D</h2>
+  <p class="price">₹17,000 / Couple + Cab</p>
+  <div class="day"><b>Day 1: Chandigarh to Dharamshala</b><br>Drive to Dharamshala, evening McLeodganj Market.</div>
+  <div class="day"><b>Day 2: Dharamshala Local</b><br>Dal Lake, Bhagsu Nag Temple & Waterfall, Dalai Lama Temple, Stadium.</div>
+  <div class="day"><b>Day 3: Dharamshala to Dalhousie</b><br>Via Khajjiar (Mini Switzerland), Kalatop.</div>
+  <div class="day"><b>Day 4: Dalhousie - Khajjiar - Chamba</b><br>Full day sightseeing, Panchpula, Subhash Chowk.</div>
+  <div class="day"><b>Day 5: Dalhousie to Chandigarh Drop</b><br>Drop to station/airport.</div>
+  <a class="btn btn-wa" href="https://wa.me/917018176861?text=Dharamshala%20Dalhousie%204N5D%20chahiye">WhatsApp 7018176861</a>
+</div>
 
-        <!-- PACKAGE 2: SHIMLA KINNAUR -->
-        <div class="package-card">
-            <img src="shimla.jpg" alt="Shimla Kinnaur" class="package-banner">
-            <div class="package-header" onclick="togglePackageDetails(this)">
-                <h3>2. Shimla Kinnaur Valley Offbeat Tour</h3>
-                <span class="status-badge">Tap to View</span>
-            </div>
-            <div class="package-content">
-                <div class="meta-flex">
-                    <div class="price-tag">₹10,000 <span>per person</span></div>
-                    <div class="duration-tag">4 Nights / 5 Days</div>
-                </div>
-                <ul class="includes-list">
-                    <li>✓ Premium Homestays</li>
-                    <li>✓ Organic Food Meals</li>
-                    <li>✓ High Clearance SUV</li>
-                    <li>✓ Cultural Guides</li>
-                </ul>
-                <div class="itinerary-heading">Day-by-Day Itinerary:</div>
-                <div class="itinerary">
-                    <div class="day-step"><strong>Day 1: Shimla Runway to Sarahan</strong><p>Travel through deep pine woods of Fagu and Rampur. Visit the majestic Bhima Kali Temple.</p></div>
-                    <div class="day-step"><strong>Day 2: Sarahan deep into Sangla Valley</strong><p>Track alongside the beautiful roaring Sutlej river bed codes. Visit historical Kamru Fort paths.</p></div>
-                    <div class="day-step"><strong>Day 3: Chitkul Border Lines (India's Last Village)</strong><p>Explore spectacular border zones at Chitkul. Touch pristine water shores of Baspa river lanes.</p></div>
-                    <div class="day-step"><strong>Day 4: Kalpa Mountains View & Return</strong><p>Witness the holy sunrise over Kinner Kailash ranges from Kalpa, before tracking back toward Shimla.</p></div>
-                </div>
-                <button class="cta-btn" onclick="selectPackageAndScroll('Shimla Kinnaur Valley Offbeat Tour (₹10,000)')">Book This Package</button>
-            </div>
-        </div>
+<!-- PACKAGE 3 -->
+<div class="card">
+  <span class="tag">SHORT TRIP - 3N/4D</span>
+  <h2>3. Manali Special 3N/4D</h2>
+  <p class="price">₹11,500 / Couple + Cab</p>
+  <div class="day"><b>Day 1: Chandigarh to Manali</b><br>Pickup and drive to Manali. Overnight Manali.</div>
+  <div class="day"><b>Day 2: Solang Valley + Atal Tunnel + Sissu</b><br>Adventure activities in Solang, Atal Tunnel, Sissu Lake.</div>
+  <div class="day"><b>Day 3: Manali Local Sightseeing</b><br>Hadimba, Vashisht, Old Manali Cafe, Mall Road Shopping.</div>
+  <div class="day"><b>Day 4: Manali to Chandigarh Drop</b><br>Via Kullu Manikaran optional.</div>
+  <a class="btn btn-wa" href="https://wa.me/917018176861?text=Manali%203N4D%20Package%20chahiye">Book Manali Trip</a>
+</div>
 
+<!-- PACKAGE 4 -->
+<div class="card">
+  <span class="tag">NEW - 5N/6D</span>
+  <h2>4. Shimla Manali Kasol 5N/6D</h2>
+  <p class="price">₹21,500 / Couple + Cab</p>
+  <div class="day"><b>Day 1: Delhi/Chandigarh to Shimla</b><br>Arrival Shimla, Mall Road.</div>
+  <div class="day"><b>Day 2: Shimla to Manali via Kullu</b><br>Scenic drive, Beas River.</div>
+  <div class="day"><b>Day 3: Manali Solang & Local</b><br>Solang, Atal Tunnel, Hadimba Temple.</div>
+  <div class="day"><b>Day 4: Manali to Kasol / Manikaran</b><br>Parvati Valley, Kasol Cafe, Manikaran Hot Spring.</div>
+  <div class="day"><b>Day 5: Kasol to Tosh / Kheerganga Trek</b><br>Free day for trek or relax in nature.</div>
+  <div class="day"><b>Day 6: Kasol to Chandigarh Drop</b><br>Tour ends.</div>
+  <a class="btn btn-call" href="tel:+917018176861">Call 7018176861 - Book Now</a>
+</div>
 
+<div class="card" style="text-align:center">
+  <h3>Why Book with Him Snow Route?</h3>
+  <p>✅ 7018176861 - Direct Owner Number - No Commission<br>✅ Local Shimla Driver - 5.0 Rating<br>✅ Clean & Sanitized Cabs - Ertiga, Innova, Sedan<br>✅ No Hidden Charges - Toll Parking Included</p>
+</div>
+
+<div class="float">
+  <a class="btn btn-call" style="flex:1;margin:0" href="tel:+917018176861">📞 Call</a>
+  <a class="btn btn-wa" style="flex:1;margin:0" href="https://wa.me/917018176861">WhatsApp</a>
+</div>
+<br><br><br><br>
+</body>
+</html>
