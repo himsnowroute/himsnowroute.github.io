@@ -1,381 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Him Snow Route - Premium Himachal Tour Packages</title>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
-    
+    <meta name="description" content="Him Snow Route - Mandi & Shimla's trusted tour operator. Best Shimla Manali Kasol Spiti packages.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* CSS Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+        :root{--primary:#0f4c81;--secondary:#17a2b8;--dark:#1e272e;--light:#f8f9fa;--success:#25d366}
+        body{background:var(--light);color:var(--dark)}
+        .top-bar{background:var(--dark);color:#fff;padding:8px 20px;display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap}
+        .top-bar a{color:#fff;text-decoration:none;margin-left:12px}
+        header{background:#fff;padding:12px 5px;position:sticky;top:0;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+        .logo{font-size:22px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:1px}
+        nav ul{display:flex;list-style:none;gap:20px} nav ul li a{text-decoration:none;color:var(--dark);font-weight:600;font-size:14px}
+        .hero{background:linear-gradient(rgba(15,76,129,0.7),rgba(30,39,46,0.8)),url('https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200') no-repeat center/cover;height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:0 20px}
+        .hero h2{font-size:46px;font-weight:700;margin-bottom:15px;text-shadow:2px 2px 8px rgba(0,0,0,0.5)}
+        .hero p{font-size:18px;margin-bottom:28px;max-width:600px}
+        .section{padding:70px 20px;max-width:1200px;margin:0 auto}
+        .section-title{text-align:center;font-size:32px;color:var(--primary);margin-bottom:45px;font-weight:700;text-transform:uppercase}
+        .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+        .package-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);border:1px solid #eef2f5;transition:0.3s;display:flex;flex-direction:column}
+        .package-card:hover{transform:translateY(-8px);box-shadow:0 12px 24px rgba(0,0,0,0.12)}
+        .p-image{height:220px;background-size:cover;background-position:center;position:relative}
+        .p-badge{position:absolute;top:15px;left:15px;background:var(--secondary);color:#fff;padding:5px 12px;font-size:11px;font-weight:600;border-radius:20px}
+        .p-details{padding:22px;display:flex;flex-direction:column;flex-grow:1}
+        .p-features{list-style:none;margin-bottom:18px} .p-features li{font-size:13px;margin-bottom:7px;color:#57606f;display:flex;align-items:center;gap:8px}
+        .p-features li i{color:var(--secondary)}
+        .p-footer{margin-top:auto;border-top:1px solid #f1f2f6;padding-top:14px;display:flex;justify-content:space-between;align-items:center}
+        .p-price{font-weight:700;font-size:17px;color:var(--primary)}
+        .btn-ui{padding:9px 16px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;display:inline-flex;gap:6px}
+        .btn-primary{background:var(--primary);color:#fff} .btn-whatsapp{background:var(--success);color:#fff}
+        .btn-lg{padding:14px 30px;font-size:16px;border-radius:30px}
+        .cta-box{background:linear-gradient(135deg,var(--primary) 0%,#1b3a4b 100%);color:#fff;padding:40px;border-radius:12px;text-align:center;margin-top:40px}
+        .contact-container{display:flex;gap:30px;flex-wrap:wrap} .contact-info{flex:1;min-width:300px;background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.05)}
+        .info-item{display:flex;gap:14px;margin-bottom:22px} .info-item i{font-size:20px;color:var(--secondary);background:#e8f7f9;padding:12px;border-radius:50%;width:46px;height:46px;display:flex;align-items:center;justify-content:center}
+        .sticky-actions{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:12px;z-index:9999}
+        .float-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-size:22px;box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+        footer{background:var(--dark);color:#a4b0be;text-align:center;padding:28px 20px;font-size:13px;border-top:4px solid var(--primary)}
+    </style>
+</head>
+<body>
 
-        :root {
-            --primary: #0f4c81;
-            --secondary: #17a2b8;
-            --dark: #1e272e;
-            --light: #f8f9fa;
-            --success: #25d366;
-            --accent: #e74c3c;
-        }
+<div class="top-bar">
+    <div><i class="fa-solid fa-location-dot"></i> Mandi | Shimla, Himachal Pradesh</div>
+    <div class="contacts">
+        <a href="tel:7018176861"><i class="fa-solid fa-phone"></i> +91-7018176861</a>
+        <a href="https://wa.me/919418000000"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+</div>
 
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-        }
+<header>
+    <div class="nav-container">
+        <div class="logo"><i class="fa-solid fa-mountain-sun"></i> Him Snow Route</div>
+        <nav><ul><li><a href="#home">Home</a></li><li><a href="#packages">Packages</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+    </div>
+</header>
 
-        /* Top Bar & Contact Navigation */
-        .top-bar {
-            background-color: var(--dark);
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-        }
+<section class="hero" id="home">
+    <h2>Magical Himalayan Journeys</h2>
+    <p>Trusted by 5000+ Travelers for Shimla, Manali, Kasol & Spiti Adventures</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <a href="#packages" class="btn-ui btn-primary btn-lg"><i class="fa-solid fa-map"></i> Explore Packages</a>
+        <a href="https://wa.me/7018176861?text=Hi%20Him%20Snow%20Route%20I%20need%20tour%20package" class="btn-ui btn-whatsapp btn-lg"><i class="fa-brands fa-whatsapp"></i> Get Best Deal</a>
+    </div>
+</section>
 
-        .top-bar .contacts a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 15px;
-            transition: color 0.3s;
-        }
+<section class="section" id="packages">
+    <h2 class="section-title">Best Selling Packages</h2>
+    <div class="grid-3">
+        <div class="package-card">
+            <div class="p-image" style="background-image:url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600')"><span class="p-badge">2N / 3D</span></div>
+            <div class="p-details"><h3>Shimla Tour Package</h3><ul class="p-features"><li><i class="fa-solid fa-check"></i> Hotel + Breakfast Dinner</li><li><i class="fa-solid fa-check"></i> Mall Road, Ridge, Kufri</li></ul><div class="p-footer"><span class="p-price">₹6,999 / Person</span><div style="display:flex;gap:6px"><a href="https://wa.me/7018176861?text=Shimla%20Tour%202N3D" class="btn-ui btn-whatsapp">Enquiry</a></div></div></div>
+        </div>
+        <div class="package-card">
+            <div class="p-image" style="background-image:url('https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=600')"><span class="p-badge">5N / 6D</span></div>
+            <div class="p-details"><h3>Shimla to Manali Tour</h3><ul class="p-features"><li><i class="fa-solid fa-check"></i> Shimla - Kufri - Manali - Solang</li><li><i class="fa-solid fa-check"></i> All Sightseeing + Cab</li></ul><div class="p-footer"><span class="p-price">₹14,999 / Person</span><a href="https://wa.me/7018176861?text=Shimla%20Manali%20Tour" class="btn-ui btn-whatsapp">Enquiry</a></div></div>
+        </div>
+        <div class="package-card">
+            <div class="p-image" style="background-image:url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=600')"><span class="p-badge">Honeymoon Special</span></div>
+            <div class="p-details"><h3>Honeymoon Package</h3><ul class="p-features"><li><i class="fa-solid fa-check"></i> Romantic Decor + Candle Light Dinner</li><li><i class="fa-solid fa-check"></i> Private Cab</li></ul><div class="p-footer"><span class="p-price">₹12,999 / Couple</span><a href="https://wa.me/7018176861?text=Honeymoon%20Package" class="btn-ui btn-whatsapp">Enquiry</a></div></div>
+        </div>
+    </div>
+    <div class="cta-box">
+        <h3>Need Custom Package for Kasol, Jibhi, Spiti, Dharamshala?</h3>
+        <p style="margin:10px 0 20px">We make it in your budget - Group, Family, Bike Trip Available</p>
+        <a href="tel:7018176861" class="btn-ui btn-primary btn-lg" style="background:#fff;color:var(--primary)"><i class="fa-solid fa-phone"></i> Call: 94180-00000</a>
+    </div>
+</section>
 
-        .top-bar .contacts a:hover {
-            color: var(--secondary);
-        }
+<section class="section" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-item"><i class="fa-solid fa-location-dot"></i><div><h4>Location</h4><p>Mandi & DC Office Road, Shimla</p></div></div>
+            <div class="info-item"><i class="fa-solid fa-phone"></i><div><h4>Call Us</h4><p>+91-7018176861</p></div></div>
+            <div class="info-item"><i class="fa-brands fa-whatsapp"></i><div><h4>WhatsApp</h4><p>Instant Quote in 5 Min</p></div></div>
+        </div>
+        <div class="contact-info" style="background:var(--primary);color:#fff">
+            <h3 style="margin-bottom:15px">Why Him Snow Route?</h3>
+            <p style="line-height:1.8">✓ Local from Mandi - No outsider commission<br>✓ 5000+ Happy Customers<br>✓ Verified on Justdial & Google<br>✓ Taxi, Hotel, Camping - All in One</p>
+        </div>
+    </div>
+</section>
 
-        /* Main Fixed Header */
-        header {
-            background-color: #fff;
-            padding: 15px 5px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+<div class="sticky-actions">
+    <a href="tel:+919418000000" class="float-btn" style="background:#007bff"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://wa.me/919418000000" class="float-btn" style="background:#25d366"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+<footer>© 2026 Him Snow Route | himsnowroute.github.io | Trusted Himachal Tour Operator | Mandi - Shimla</footer>
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero / Home Landing Section */
-        .hero {
-            background: linear-gradient(rgba(15, 76, 129, 0.7), rgba(30, 39, 46, 0.8)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-        }
-
-        .hero h2 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
-        /* Global Layout Sections */
-        .section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            color: var(--primary);
-            margin-bottom: 50px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Flex Layout Grid System */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        /* Modern Package Cards Structure */
-        .package-card {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-            border: 1px solid #eef2f5;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .package-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-        }
-
-        .p-image {
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .p-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: var(--secondary);
-            color: #fff;
-            padding: 5px 12px;
-            font-size: 12px;
-            font-weight: 600;
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        .p-details {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .p-details h3 {
-            font-size: 20px;
-            color: var(--dark);
-            margin-bottom: 12px;
-        }
-
-        .p-features {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .p-features li {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #57606f;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .p-features li i {
-            color: var(--secondary);
-        }
-
-        .p-footer {
-            margin-top: auto;
-            border-top: 1px solid #f1f2f6;
-            padding-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .p-price {
-            font-weight: 700;
-            font-size: 18px;
-            color: var(--primary);
-        }
-
-        /* Action Buttons */
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .btn-ui {
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: opacity 0.3s;
-        }
-
-        .btn-ui:hover {
-            opacity: 0.9;
-        }
-
-        .btn-primary { background-color: var(--primary); color: #fff; }
-        .btn-secondary { background-color: var(--secondary); color: #fff; }
-        .btn-whatsapp { background-color: var(--success); color: #fff; }
-        .btn-lg { padding: 14px 30px; font-size: 16px; border-radius: 30px; }
-
-        /* About Section Design */
-        .about-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: #57606f;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        /* Services Grid Setup */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            text-align: center;
-        }
-
-        .feature-box {
-            background-color: #fff;
-            padding: 40px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border-bottom: 4px solid transparent;
-            transition: border-color 0.3s;
-        }
-
-        .feature-box:hover {
-            border-color: var(--secondary);
-        }
-
-        .feature-box i {
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        /* Contact Details Page Style */
-        .contact-container {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .info-item i {
-            font-size: 24px;
-            color: var(--secondary);
-            background: #e8f7f9;
-            padding: 12px;
-            border-radius: 50%;
-        }
-
-        .info-item h4 { font-size: 16px; color: #747d8c; }
-        .info-item p { font-size: 18px; font-weight: 600; }
-
-        .cta-box {
-            background: linear-gradient(135deg, var(--primary) 0%, #1b3a4b 100%);
-            color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            width: 100%;
-            margin-top: 40px;
-        }
-
-        /* Footer Copyright Setup */
-        footer {
-            background-color: var(--dark);
-            color: #a4b0be;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
-            border-top: 4px solid var(--primary);
-        }
-
-        /* Fixed Quick Floating Sticky Action Bar Elements */
-        .sticky-actions {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 9999;
-        }
-
-        .float-btn {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
+</body>
+</html>
