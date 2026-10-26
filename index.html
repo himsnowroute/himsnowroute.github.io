@@ -1,325 +1,381 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Him Snow Route - Best Tour Packages</title>
+    <title>Him Snow Route - Premium Himachal Tour Packages</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
     <style>
-        /* बेसिक रीसेट और थीम कलर्स (पहाड़ों और बर्फ से प्रेरित ब्लू थीम) */
+        /* CSS Reset & Variables */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #0f4c81;
+            --secondary: #17a2b8;
+            --dark: #1e272e;
+            --light: #f8f9fa;
+            --success: #25d366;
+            --accent: #e74c3c;
         }
 
         body {
-            background-color: #f0f4f8;
-            color: #2c3e50;
-            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--dark);
         }
 
-        /* हेडर और ब्रांडिंग */
-        header {
-            background: linear-gradient(135deg, #1b3a4b 0%, #216583; 100%);
+        /* Top Bar & Contact Navigation */
+        .top-bar {
+            background-color: var(--dark);
             color: #fff;
-            padding: 25px 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
         }
 
-        header h1 {
-            font-size: 32px;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            color: #f3f9fb;
+        .top-bar .contacts a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: color 0.3s;
         }
 
-        header p {
-            font-size: 16px;
-            color: #aed9e0;
+        .top-bar .contacts a:hover {
+            color: var(--secondary);
         }
 
-        /* मुख्य कंटेनर */
-        .container {
-            max-width: 1100px;
-            margin: 30px auto;
+        /* Main Fixed Header */
+        header {
+            background-color: #fff;
+            padding: 15px 5px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero / Home Landing Section */
+        .hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.7), rgba(30, 39, 46, 0.8)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* Global Layout Sections */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
-            position: relative;
-            padding-bottom: 10px;
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 3px;
-            background-color: #00a896;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* पैकेजेस ग्रिड (Grid) */
-        .packages-grid {
+        /* Flex Layout Grid System */
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        /* पैकेज कार्ड का स्टाइल */
+        /* Modern Package Cards Structure */
         .package-card {
-            background: #fff;
-            border-radius: 10px;
+            background-color: #fff;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e1e8ed;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border: 1px solid #eef2f5;
+            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease;
         }
 
         .package-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
         }
 
-        .package-header {
-            background-color: #216583;
-            color: white;
-            padding: 15px 20px;
+        .p-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
 
-        .package-header h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .duration {
-            background-color: #00a896;
-            color: white;
+        .p-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--secondary);
+            color: #fff;
+            padding: 5px 12px;
             font-size: 12px;
-            padding: 3px 8px;
-            border-radius: 3px;
-            display: inline-block;
-            font-weight: bold;
+            font-weight: 600;
+            border-radius: 20px;
+            text-transform: uppercase;
         }
 
-        .package-body {
-            padding: 20px;
+        .p-details {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
             flex-grow: 1;
         }
 
-        .package-body ul {
-            list-style: none;
-            margin-bottom: 15px;
-        }
-
-        .package-body ul li {
-            margin-bottom: 8px;
-            font-size: 14px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .package-body ul li::before {
-            content: '❄️';
-            position: absolute;
-            left: 0;
-            font-size: 12px;
-        }
-
-        .price {
+        .p-details h3 {
             font-size: 20px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 15px;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
+            color: var(--dark);
+            margin-bottom: 12px;
         }
 
-        /* संपर्क और एक्शन बटन्स */
-        .contact-section {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        .p-features {
+            list-style: none;
+            margin-bottom: 20px;
         }
 
-        .contact-buttons {
+        .p-features li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #57606f;
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            align-items: center;
+            gap: 10px;
         }
 
-        .btn {
+        .p-features li i {
+            color: var(--secondary);
+        }
+
+        .p-footer {
+            margin-top: auto;
+            border-top: 1px solid #f1f2f6;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .p-price {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--primary);
+        }
+
+        /* Action Buttons */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-ui {
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
             display: inline-flex;
             align-items: center;
-            padding: 12px 25px;
-            text-decoration: none;
-            color: white;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
+            gap: 8px;
             transition: opacity 0.3s;
         }
 
-        .btn:hover {
+        .btn-ui:hover {
             opacity: 0.9;
         }
 
-        .btn-call {
-            background-color: #007bff;
+        .btn-primary { background-color: var(--primary); color: #fff; }
+        .btn-secondary { background-color: var(--secondary); color: #fff; }
+        .btn-whatsapp { background-color: var(--success); color: #fff; }
+        .btn-lg { padding: 14px 30px; font-size: 16px; border-radius: 30px; }
+
+        /* About Section Design */
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
         }
 
-        .btn-whatsapp {
-            background-color: #25d366;
+        .about-text {
+            flex: 1;
+            min-width: 300px;
         }
 
-        /* फुटर */
-        footer {
+        .about-text p {
+            margin-bottom: 20px;
+            color: #57606f;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Services Grid Setup */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            color: #7f8c8d;
-            font-size: 14px;
-            border-top: 1px solid #dcdde1;
         }
-    </style>
-</head>
-<body>
 
-    <!-- हेडर सेक्शन -->
-    <header>
-        <h1>Him Snow Route</h1>
-        <p>Your Trusted Travel Partner for Magical Himalayan Journeys</p>
-    </header>
+        .feature-box {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-bottom: 4px solid transparent;
+            transition: border-color 0.3s;
+        }
 
-    <div class="container">
-        <h2 class="section-title">Our Best Tour Packages</h2>
-        
-        <!-- पैकेजेस लिस्ट -->
-        <div class="packages-grid">
-            
-            <!-- Package 1 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Shimla Tour Package</h3>
-                    <span class="duration">2 Nights / 3 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>Comfortable Hotel Stay</li>
-                        <li>Daily Breakfast & Dinner</li>
-                        <li>Mall Road, Ridge & Jakhoo Temple Visit</li>
-                        <li>Kufri Excursion</li>
-                    </ul>
-                    <p class="price">Price: Best Deal on Call</p>
-                </div>
-            </div>
+        .feature-box:hover {
+            border-color: var(--secondary);
+        }
 
-            <!-- Package 2 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Shimla to Manali Tour</h3>
-                    <span class="duration">5 Nights / 6 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>Complete Scenic Road Trip</li>
-                        <li>Shimla Local & Kufri Sightseeing</li>
-                        <li>Manali Hadimba Temple & Solang Valley</li>
-                        <li>All Transportation Included</li>
-                    </ul>
-                    <p class="price">Price: Best Deal on Call</p>
-                </div>
-            </div>
+        .feature-box i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
 
-            <!-- Package 3 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Special Honeymoon Package</h3>
-                    <span class="duration">4 Nights / 5 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>Romantic Room Decoration</li>
-                        <li>Candlelight Dinner & Honeymoon Cake</li>
-                        <li>Private Cab for Sightseeing</li>
-                        <li>Memorable Himalayan Views</li>
-                    </ul>
-                    <p class="price">Price: Best Deal on Call</p>
-                </div>
-            </div>
+        /* Contact Details Page Style */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
-            <!-- Package 4 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Chandigarh to Manali</h3>
-                    <span class="duration">3 Nights / 4 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>Pickup & Drop from Chandigarh</li>
-                        <li> Kullu Valley Riverside Visit</li>
-                        <li>Solang Valley & Rohtang Pass (Optional)</li>
-                        <li>Local Market Exploration</li>
-                    </ul>
-                    <p class="price">Price: Best Deal on Call</p>
-                </div>
-            </div>
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-            <!-- Package 5 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Kasol & Jibhi Explorer</h3>
-                    <span class="duration">5 Nights / 6 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>Parvati Valley & Manikaran Sahib Sahib Visit</li>
-                        <li>Cafe Hopping in Kasol</li>
-                        <li>Beautiful Jibhi Waterfall & Jaloori Pass</li>
-                        <li>Riverside Camping Experience</li>
-                    </ul>
-                    <p class="price">Price: Best Deal on Call</p>
-                </div>
-            </div>
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
 
-            <!-- Package 6 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Dharamshala & Dalhousie</h3>
-                    <span class="duration">6 Nights / 7 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>McLeodganj & Dalai Lama Temple Visit</li>
-                        <li>Bhagsunag Waterfall Exploration</li>
-                        <li>Dalhousie & Khajjiar (Mini Switzerland)</li>
-                        <li>Scenic Mountain Drives</li>
-                    </ul>
-                    <p class="price">Price: Best Deal on Call</p>
-                </div>
-            </div>
+        .info-item i {
+            font-size: 24px;
+            color: var(--secondary);
+            background: #e8f7f9;
+            padding: 12px;
+            border-radius: 50%;
+        }
 
-            <!-- Package 7 -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3>Shimla Local Sightseeing</h3>
-                    <span class="duration">1 Night / 2 Days</span>
-                </div>
-                <div class="package-body">
-                    <ul>
-                        <li>Detailed Shimla City Tour</li>
-                        <li>Advanced Study & Museum Visit</li>
-                        <li>Relaxed Evening at the Ridge</li>
+        .info-item h4 { font-size: 16px; color: #747d8c; }
+        .info-item p { font-size: 18px; font-weight: 600; }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #1b3a4b 100%);
+            color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /* Footer Copyright Setup */
+        footer {
+            background-color: var(--dark);
+            color: #a4b0be;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            border-top: 4px solid var(--primary);
+        }
+
+        /* Fixed Quick Floating Sticky Action Bar Elements */
+        .sticky-actions {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 9999;
+        }
+
+        .float-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
